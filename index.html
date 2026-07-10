@@ -145,7 +145,7 @@
             opacity: 0.8;
         }
 
-        /* SECCIÓN DE CASOS DE ÉXITO */
+        /* SECCIÓN DE CASOS DE ÉXITO (DISEÑO EDITORIAL CON IMÁGENES) */
         .section-title {
             text-align: center;
             font-size: 2.5rem;
@@ -173,6 +173,41 @@
 
         .project-card:hover {
             transform: translateY(-5px);
+        }
+
+        /* CONTENEDOR PARA LAS EVIDENCIAS VISUALES */
+        .evidence-visual {
+            width: 100%;
+            height: 220px;
+            background-color: #eaeaea;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--lineas-finas);
+            position: relative;
+        }
+
+        .evidence-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .evidence-visual img {
+            transform: scale(1.05);
+        }
+
+        .evidence-placeholder {
+            position: absolute;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--azul-ritz);
+            background: rgba(253, 251, 247, 0.9);
+            padding: 10px 20px;
+            border: 1px solid var(--oro-champagne);
         }
 
         .project-body {
@@ -208,7 +243,6 @@
             list-style: none;
             border-top: 1px solid var(--lineas-finas);
             padding-top: 20px;
-            margin-bottom: 25px;
         }
 
         .project-kpis li {
@@ -301,6 +335,7 @@
             text-transform: uppercase;
         }
 
+        /* RESPONSIVO */
         @media (max-width: 768px) {
             header h1 { font-size: 2.5rem; }
             .gov-bullets { grid-template-columns: 1fr; }
@@ -323,26 +358,3 @@
     <!-- CABECERA PRINCIPAL (HERO) -->
     <header>
         <h1>TAMARA CAPARRÓS COLÓN, MBA</h1>
-        <div class="subtitle">Senior Marketing, Advertising & Communications Executive</div>
-        <p style="margin-bottom: 40px; font-size: 1.1rem; color: #4A4A4A;">
-            Preservación de activos de marca, estabilización reputacional y dirección estratégica de portafolios multimillonarios en escenarios de alta volatilidad y crisis institucionales.
-        </p>
-        <div class="btn-container">
-            <a href="mailto:tcc0221@gmail.com" class="btn-gold">Iniciar Consulta</a>
-            <!-- ENLACE DIRECTO A TU CV PDF EN EL REPOSITORIO -->
-            <a href="TAMARA_CAPARROS_COLONING2026.pdf" target="_blank" class="btn-gold">Descargar CV Ejecutivo</a>
-        </div>
-    </header>
-
-    <!-- METRICAS -->
-    <section class="metrics-container">
-        <div class="metric-card">
-            <h3>+$32.4M</h3>
-            <p>Impacto Económico Directo Generado</p>
-        </div>
-        <div class="metric-card">
-            <h3>+$500M</h3>
-            <p>Control Operacional de Cuentas Federales</p>
-        </div>
-        <div class="metric-card">
-            <h3>18+</h3>

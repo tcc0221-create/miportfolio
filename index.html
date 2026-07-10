@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tamara Caparrós, MBA | Executive Portfolio</title>
+    <title>Tamara Caparrós | Executive Portfolio</title>
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -94,16 +94,9 @@
             margin-bottom: 40px;
         }
 
-        .btn-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
         .btn-gold {
             display: inline-block;
-            padding: 15px 35px;
+            padding: 15px 40px;
             border: 1px solid var(--oro-champagne);
             color: var(--azul-ritz);
             text-decoration: none;
@@ -145,7 +138,7 @@
             opacity: 0.8;
         }
 
-        /* SECCIÓN DE CASOS DE ÉXITO (DISEÑO EDITORIAL CON IMÁGENES) */
+        /* SECCIÓN DE CASOS DE ÉSITO (DISEÑO EDITORIAL) */
         .section-title {
             text-align: center;
             font-size: 2.5rem;
@@ -157,65 +150,23 @@
         .projects-grid {
             padding: 0 10% 80px 10%;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
         }
 
         .project-card {
             background: #ffffff;
             border: 1px solid var(--lineas-finas);
+            padding: 40px;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             box-shadow: 0 4px 20px rgba(0,0,0,0.02);
             transition: transform 0.3s;
-            overflow: hidden;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
-        }
-
-        /* CONTENEDOR PARA LAS EVIDENCIAS VISUALES */
-        .evidence-visual {
-            width: 100%;
-            height: 220px;
-            background-color: #eaeaea;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 1px solid var(--lineas-finas);
-            position: relative;
-        }
-
-        .evidence-visual img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .project-card:hover .evidence-visual img {
-            transform: scale(1.05);
-        }
-
-        .evidence-placeholder {
-            position: absolute;
-            font-family: 'Cormorant Garamond', serif;
-            font-style: italic;
-            font-size: 1.1rem;
-            color: var(--azul-ritz);
-            background: rgba(253, 251, 247, 0.9);
-            padding: 10px 20px;
-            border: 1px solid var(--oro-champagne);
-        }
-
-        .project-body {
-            padding: 40px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
 
         .project-meta {
@@ -347,7 +298,7 @@
 
     <!-- MENÚ DE NAVEGACIÓN -->
     <nav>
-        <div class="brand-name">T. Caparrós, MBA</div>
+        <div class="brand-name">T. Caparrós</div>
         <div class="nav-links">
             <a href="#casos">Casos de Éxito</a>
             <a href="#gobernanza">Gobernanza</a>
@@ -357,4 +308,39 @@
 
     <!-- CABECERA PRINCIPAL (HERO) -->
     <header>
-        <h1>TAMARA CAPARRÓS COLÓN, MBA</h1>
+        <h1>TAMARA CAPARRÓS COLÓN</h1>
+        <div class="subtitle">Senior Marketing, Advertising & Communications Executive</div>
+        <p style="margin-bottom: 40px; font-size: 1.1rem; color: #4A4A4A;">
+            Preservación de activos de marca, estabilización reputacional y dirección estratégica de portafolios multimillonarios en escenarios de alta volatilidad y crisis institucionales.
+        </p>
+        <a href="mailto:tcc0221@gmail.com" class="btn-gold">Iniciar Consulta Ejecutiva</a>
+    </header>
+
+    <!-- CONTADORES FINANCIEROS DE IMPACTO -->
+    <section class="metrics-container">
+        <div class="metric-card">
+            <h3>+$32.4M</h3>
+            <p>Impacto Económico Directo Generado</p>
+        </div>
+        <div class="metric-card">
+            <h3>+$500M</h3>
+            <p>Control Operacional de Cuentas Federales</p>
+        </div>
+        <div class="metric-card">
+            <h3>18+</h3>
+            <p>Años de Trayectoria de Alto Nivel</p>
+        </div>
+        <div class="metric-card">
+            <h3>112</h3>
+            <p>Iniciativas Anuales de Expansión</p>
+        </div>
+    </section>
+
+    <!-- GALERÍA DE CASOS DE ÉXITO -->
+    <h2 id="casos" class="section-title">Portafolio de Dirección Estratégica</h2>
+    <section class="projects-grid">
+        
+        <!-- CASO 1 -->
+        <div class="project-card">
+            <div>
+                <div class="project-meta">Compañía de Turismo de Puerto Rico</div>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamara Caparrós | Executive Portfolio</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CONFIGURACIÓN CROMÁTICA RITZ-CARLTON */
+        :root {
+            --azul-ritz: #041E42;
+            --oro-champagne: #C5A059;
+            --marfil-premium: #FDFBF7;
+            --texto-oscuro: #2D3142;
+            --lineas-finas: rgba(197, 160, 89, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--marfil-premium);
+            color: var(--texto-oscuro);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .brand-name {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--azul-ritz);
+            font-weight: 600;
+        }
+
+        /* NAVEGACIÓN PREMIUM */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 10%;
+            border-bottom: 1px solid var(--lineas-finas);
+            background-color: var(--marfil-premium);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .brand-name {
+            font-size: 1.6rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--texto-oscuro);
+            margin-left: 30px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--oro-champagne);
+        }
+
+        /* SECCIÓN HERO (PORTADA DE LUJO SILENCIOSO) */
+        header {
+            padding: 100px 10% 80px 10%;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        header .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.6rem;
+            color: var(--oro-champagne);
+            margin-bottom: 40px;
+        }
+
+        .btn-gold {
+            display: inline-block;
+            padding: 15px 40px;
+            border: 1px solid var(--oro-champagne);
+            color: var(--azul-ritz);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            transition: all 0.4s ease;
+            background: transparent;
+        }
+
+        .btn-gold:hover {
+            background-color: var(--azul-ritz);
+            color: var(--marfil-premium);
+            border-color: var(--azul-ritz);
+        }
+
+        /* CONTADORES DE IMPACTO FINANCIERO */
+        .metrics-container {
+            background-color: var(--azul-ritz);
+            color: var(--marfil-premium);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            padding: 60px 10%;
+            text-align: center;
+            border-top: 4px solid var(--oro-champagne);
+        }
+
+        .metric-card h3 {
+            color: var(--oro-champagne);
+            font-size: 3rem;
+            margin-bottom: 5px;
+        }
+
+        .metric-card p {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+
+        /* SECCIÓN DE CASOS DE ÉXITO (DISEÑO EDITORIAL) */
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin: 80px 0 40px 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .projects-grid {
+            padding: 0 10% 80px 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border: 1px solid var(--lineas-finas);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-meta {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--oro-champagne);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .project-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        .project-kpis {
+            list-style: none;
+            border-top: 1px solid var(--lineas-finas);
+            padding-top: 20px;
+        }
+
+        .project-kpis li {
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .project-kpis li::before {
+            content: "•";
+            color: var(--oro-champagne);
+            font-size: 1.3rem;
+            position: absolute;
+            left: 0;
+            top: -4px;
+        }
+
+        /* SECCIÓN DE GOBERNANZA Y SUCESIÓN */
+        .governance-section {
+            background-color: #f5f1ea;
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+        .governance-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.8rem;
+            color: var(--azul-ritz);
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+
+        .gov-bullets {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            text-align: left;
+        }
+
+        .gov-item h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--azul-ritz);
+            margin-bottom: 10px;
+        }
+
+        /* PIE DE PÁGINA (FOOTER) */
+        footer {
+            background-color: var(--azul-ritz);
+            color: var(--marfil-premium);
+            padding: 60px 10% 40px 10%;
+            text-align: center;
+            border-top: 1px solid var(--lineas-finas);
+        }
+
+        footer p {
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            font-size: 1.1rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+        }
+
+        .contact-links a {
+            color: var(--oro-champagne);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            margin-top: 40px;
+            font-size: 0.75rem;
+            opacity: 0.5;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            .gov-bullets { grid-template-columns: 1fr; }
+            nav { padding: 20px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav>
+        <div class="brand-name">T. Caparrós</div>
+        <div class="nav-links">
+            <a href="#casos">Casos de Éxito</a>
+            <a href="#gobernanza">Gobernanza</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- CABECERA PRINCIPAL (HERO) -->
+    <header>
+        <h1>TAMARA CAPARRÓS COLÓN</h1>
+        <div class="subtitle">Senior Marketing, Advertising & Communications Executive</div>
+        <p style="margin-bottom: 40px; font-size: 1.1rem; color: #4A4A4A;">
+            Preservación de activos de marca, estabilización reputacional y dirección estratégica de portafolios multimillonarios en escenarios de alta volatilidad y crisis institucionales.
+        </p>
+        <a href="mailto:tcc0221@gmail.com" class="btn-gold">Iniciar Consulta Ejecutiva</a>
+    </header>
+
+    <!-- CONTADORES FINANCIEROS DE IMPACTO -->
+    <section class="metrics-container">
+        <div class="metric-card">
+            <h3>+$32.4M</h3>
+            <p>Impacto Económico Directo Generado</p>
+        </div>
+        <div class="metric-card">
+            <h3>+$500M</h3>
+            <p>Control Operacional de Cuentas Federales</p>
+        </div>
+        <div class="metric-card">
+            <h3>18+</h3>
+            <p>Años de Trayectoria de Alto Nivel</p>
+        </div>
+        <div class="metric-card">
+            <h3>112</h3>
+            <p>Iniciativas Anuales de Expansión</p>
+        </div>
+    </section>
+
+    <!-- GALERÍA DE CASOS DE ÉXITO -->
+    <h2 id="casos" class="section-title">Portafolio de Dirección Estratégica</h2>
+    <section class="projects-grid">
+        
+        <!-- CASO 1 -->
+        <div class="project-card">
+            <div>
+                <div class="project-meta">Compañía de Turismo de Puerto Rico</div>
